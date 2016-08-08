@@ -10,5 +10,9 @@
     "forms"
   ],
   "author": "Jim Wharton",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
 }
