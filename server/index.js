@@ -4,8 +4,21 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const config = require('./config/main');
+const router = require('./router');  ;
+
+// Database connection
+mongoose.connect(config.database);
+
+// Start the server
+const server = app.listen(config.port);
+console.log('🌎 - Your server is running on port ' + config.port + '.');
+
+// Set static file location for production
+app.use(express.static(__dirname + '/public'));
 
 // Config middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(logger('dev')); // Log requests to API using morga// Enable CORS from client-side
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -14,12 +27,6 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
-// Database connection
-mongoose.connect(config.database);
-
-// Start the server
-const server = app.listen(config.port);
-console.log('🌎 - Your server is running on port ' + config.port + '.');
+// Feed the app to the router
+router(app);
