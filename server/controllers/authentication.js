@@ -111,7 +111,7 @@ exports.roleAuthorization = function(role) {
             }
 
             // If user is found, check role.
-            if (foundUser.role == role) {
+            if (foundUser.role === role) {
                 return next();
             }
 

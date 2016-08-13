@@ -21,12 +21,12 @@ export default function(ComposedComponent) {
 
         render() {
             return <ComposedComponent {...this.props} />
+        }
     }
-}
 
-function mapStateToProps(state) {
-    return { authenticated: state.auth.authenticated };
-}
+    function mapStateToProps(state) {
+        return { authenticated: state.auth.authenticated };
+    }
 
-return connect(mapStateToProps)(Authentication);
+    return connect(mapStateToProps)(Authentication);
 }

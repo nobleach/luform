@@ -8,6 +8,7 @@ import { AUTH_USER,
 } from './types';
 
     const API_URL = 'http://localhost:4000/api';
+    const CLIENT_ROOT_URL = 'http://localhost:8080';
 
     export function errorHandler(dispatch, error, type) {
         let errorMessage = '';
@@ -32,58 +33,59 @@ import { AUTH_USER,
                 payload: errorMessage
             });
         }
-        }
+    }
 
-        export function loginUser({ email, password }) {
-            return function(dispatch) {
-                axios.post(`${API_URL}/auth/login`, { email, password })
-                    .then(response => {
-                        cookie.save('token', response.data.token, { path: '/' });
-                        dispatch({ type: AUTH_USER });
-                        window.location.href = CLIENT_ROOT_URL + '/dashboard';
-                    })
-                    .catch((error) => {
-                        errorHandler(dispatch, error.response, AUTH_ERROR)
-                    });
-            }
-        }
-
-        export function registerUser({ email, firstName, lastName, password }) {
-            return function(dispatch) {
-                axios.post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
-                    .then(response => {
-                        cookie.save('token', response.data.token, { path: '/' });
-                        dispatch({ type: AUTH_USER });
-                        window.location.href = CLIENT_ROOT_URL + '/dashboard';
-                    })
-                    .catch((error) => {
-                        errorHandler(dispatch, error.response, AUTH_ERROR)
-                    });
-            }
-        }
-
-        export function logoutUser() {
-            return function (dispatch) {
-                dispatch({ type: UNAUTH_USER });
-                cookie.remove('token', { path: '/' });
-
-                window.location.href = CLIENT_ROOT_URL + '/login';
-            }
-        }
-
-        export function protectedTest() {
-            return function(dispatch) {
-                axios.get(`${API_URL}/protected`, {
-                    headers: { 'Authorization': cookie.load('token') }
-                })
+    export function loginUser({ email, password }) {
+        return function(dispatch) {
+            axios.post(`${API_URL}/auth/login`, { email, password })
                 .then(response => {
-                    dispatch({
-                        type: PROTECTED_TEST,
-                        payload: response.data.content
-                    });
+                    cookie.save('token', response.data.token, { path: '/' });
+                    dispatch({ type: AUTH_USER });
+                    window.location.href = CLIENT_ROOT_URL + '/dashboard';
                 })
                 .catch((error) => {
                     errorHandler(dispatch, error.response, AUTH_ERROR)
                 });
-            }
         }
+    }
+
+    export function registerUser({ email, firstName, lastName, password }) {
+        return function(dispatch) {
+            axios.post(`${API_URL}/auth/register`, { email, firstName, lastName, password })
+                .then(response => {
+                    cookie.save('token', response.data.token, { path: '/' });
+                    dispatch({ type: AUTH_USER });
+                    window.location.href = CLIENT_ROOT_URL + '/dashboard';
+                })
+                .catch((error) => {
+                    errorHandler(dispatch, error.response, AUTH_ERROR)
+                });
+        }
+    }
+
+    export function logoutUser() {
+        return function (dispatch) {
+            dispatch({ type: UNAUTH_USER });
+            cookie.remove('token', { path: '/' });
+
+            window.location.href = CLIENT_ROOT_URL + '/login';
+        }
+    }
+
+    export function protectedTest() {
+        return function(dispatch) {
+            // so this doesn't exist
+            axios.get(`${API_URL}/protected`, {
+                headers: { 'Authorization': cookie.load('token') }
+            })
+            .then(response => {
+                dispatch({
+                    type: PROTECTED_TEST,
+                    payload: response.data.content
+                });
+            })
+            .catch((error) => {
+                errorHandler(dispatch, error.response, AUTH_ERROR)
+            });
+        }
+    }

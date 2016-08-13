@@ -9,6 +9,7 @@ const config = {
         path: __dirname,
         filename: 'bundle.js'
     },
+    devtool: 'source-map',
     module: {
         loaders: [{
             exclude: /node_modules/,

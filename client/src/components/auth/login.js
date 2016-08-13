@@ -5,6 +5,14 @@ import { Link } from 'react-router';
 import { loginUser } from '../../actions';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import Paper from 'material-ui/Paper';
+
+const style = {
+    margin: 20,
+    textAlign: 'center',
+    display: 'inline-block',
+    padding: 20
+};
 
 const form = reduxForm({
     form: 'login',
@@ -30,7 +38,6 @@ const renderPasswordField = field => (
 
 class Login extends Component {
     handleFormSubmit(formProps) {
-        console.log(formProps);
         this.props.loginUser(formProps);
     }
 
@@ -48,7 +55,7 @@ class Login extends Component {
         const { fields: {password, email}, handleSubmit } = this.props;
 
         return (
-            <div>
+            <Paper style={style} zDepth={2}>
                 <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                     {this.renderAlert()}
                     <div>
@@ -63,7 +70,7 @@ class Login extends Component {
                         type="submit"
                     />
                 </form>
-            </div>
+            </Paper>
         );
     }
 }
