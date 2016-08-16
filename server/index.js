@@ -2,12 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const logger = require('morgan');
-const mongoose = require('mongoose');
 const config = require('./config/main');
 const router = require('./router');  ;
-
-// Database connection
-mongoose.connect(config.database);
 
 // Start the server
 const server = app.listen(config.port);
