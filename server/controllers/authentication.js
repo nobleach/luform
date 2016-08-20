@@ -5,17 +5,7 @@ const crypto = require('crypto');
 const config = require('../config/main');
 // TODO find a better way to pass this around
 const Sequelize = require('sequelize');
-
-// Database connection
-var sequelize = new Sequelize('luform', 'luform', 'oi2Vespa!', {
-    host: 'localhost',
-    dialect: 'postgres',
-    pool: {
-        max: 5,
-        min: 0,
-        idle: 10000
-    }
-});
+const sequelize = require('../config/sequelize');
 
 const User = sequelize.import('../models/user');
 
