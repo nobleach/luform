@@ -2,8 +2,22 @@
 
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const User = require('../models/user');
 const config = require('../config/main');
+// TODO find a better way to pass this around
+const Sequelize = require('sequelize');
+
+// Database connection
+var sequelize = new Sequelize('luform', 'luform', 'oi2Vespa!', {
+    host: 'localhost',
+    dialect: 'postgres',
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+    }
+});
+
+const User = sequelize.import('../models/user');
 
 function generateToken(user) {
     return jwt.sign(user, config.secret, {
@@ -60,20 +74,33 @@ exports.register = function(req, res, next) {
         return res.status(422).send({ error: 'You must enter a password.' });
     }
 
-    User.findOne({email: email}).then(function(existingUser) {
+    User.findOne({where: {email: email}}).then(function(existingUser) {
         // If user is not unique, return error
         if (existingUser) {
             return res.status(422).send({ error: 'That email address is already in use.' });
         }
 
         // If email is unique and password was provided, create account
-        let user = new User({
-            id: User.generateId(),
-            email: email,
-            password: User.generateHach(password),
-            firstName: firstName,
-            lastName: lastName
-        });
+        User
+            .build({
+                id: User.generateId(),
+                email: email,
+                password: User.generateHash(password),
+                firstName: firstName,
+                lastName: lastName
+            })
+            .save()
+            .then(function(user) {
+                // Respond with JWT if user was created
+                let userInfo = setUserInfo(user);
+
+                res.status(201).json({
+                    token: 'JWT ' + generateToken(userInfo),
+                    user: userInfo
+                });
+            }).catch(function(err) {
+                // handle error
+            });
     });
 
     // User.findOne({ email: email }, function(err, existingUser) {
