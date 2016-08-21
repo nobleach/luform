@@ -3,11 +3,7 @@
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const config = require('../config/main');
-// TODO find a better way to pass this around
-const Sequelize = require('sequelize');
-const sequelize = require('../config/sequelize');
-
-const User = sequelize.import('../models/user');
+const User = require('../models').user;
 
 function generateToken(user) {
     return jwt.sign(user, config.secret, {
