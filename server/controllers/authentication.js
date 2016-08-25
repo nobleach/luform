@@ -88,38 +88,6 @@ exports.register = function(req, res, next) {
                 // handle error
             });
     });
-
-    // User.findOne({ email: email }, function(err, existingUser) {
-    //     if (err) {
-    //         return next(err);
-    //     }
-    //
-    //     // If user is not unique, return error
-    //     if (existingUser) {
-    //         return res.status(422).send({ error: 'That email address is already in use.' });
-    //     }
-    //
-    //     // If email is unique and password was provided, create account
-    //     let user = new User({
-    //         email: email,
-    //         password: User.generateHach(password),
-    //         firstName: firstName,
-    //         lastName: lastName
-    //     });
-    //
-    //     user.save(function(err, user) {
-    //         if (err) { return next(err); }
-    //
-    //         // Respond with JWT if user was created
-    //
-    //         let userInfo = setUserInfo(user);
-    //
-    //         res.status(201).json({
-    //             token: 'JWT ' + generateToken(userInfo),
-    //             user: userInfo
-    //         });
-    //     });
-    // });
 }
 
 //========================================
