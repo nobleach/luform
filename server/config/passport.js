@@ -10,10 +10,12 @@ const localOptions = { usernameField: 'email' };
 // Setting up local login strategy
 const localLogin = new LocalStrategy(localOptions, function(email, password, done) {
     User.findOne({where: {email: email}}).then(function(user) {
-        if(!user) {
+        console.log(user.dataValues);
+        if(!user.dataValues) {
             return done(null, false, { error: 'Your login details could not be verified. Please try again.' });
         }
 
+        console.log(user.comparePassword);
         user.comparePassword(password, function(err, isMatch) {
             if (err) {
                 return done(err);
@@ -22,7 +24,7 @@ const localLogin = new LocalStrategy(localOptions, function(email, password, don
                 return done(null, false, { error: "Your login details could not be verified. Please try again." });
             }
 
-            return done(null, user);
+            return done(null, user.dataValues);
         });
     });
 });
