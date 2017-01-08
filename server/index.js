@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Config middleware
 app.use(bodyParser.urlencoded({extended: false}));
+debugger;
 app.use(bodyParser.json());
 app.use(logger('dev')); // Log requests to API using morga// Enable CORS from client-side
 app.use(function(req, res, next) {
