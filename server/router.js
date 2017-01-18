@@ -1,5 +1,5 @@
 const AuthenticationController = require('./controllers/authentication');
-const DashboardController = erquire('./controllers/dashboard');
+const DashboardController = require('./controllers/dashboard');
 const express = require('express');
 const passportService = require('./config/passport');
 const passport = require('passport');
