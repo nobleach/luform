@@ -1,4 +1,5 @@
 const AuthenticationController = require('./controllers/authentication');
+const DashboardController = erquire('./controllers/dashboard');
 const express = require('express');
 const passportService = require('./config/passport');
 const passport = require('passport');
@@ -8,10 +9,10 @@ const requireAuth = passport.authenticate('jwt', {session: false});
 const requireLogin = passport.authenticate('local', {session: false});
 
 // Constants for role types
-const REQUIRE_ADMIN = "Admin";
-const REQUIRE_OWNER = "Owner";
-const REQUIRE_CLIENT = "Client";
-const REQUIRE_MEMBER = "Member";
+const REQUIRE_REGISTAR = "registar";
+const REQUIRE_PASTOR = "pastor";
+const REQUIRE_SPONSOR = "sponsor";
+const REQUIRE_PILGRIM = "pilgrim";
 
 module.exports = function(app) {
     // Initializing route groups
@@ -38,4 +39,7 @@ module.exports = function(app) {
     apiRoutes.get('/protected', requireAuth, function(req, res) {
         res.send({ content: 'The protected test route is functional!'});
     });
+
+    // Dashboard route
+    apiRoutes.get('/dashboard', requireAuth, DashboardController.show);
 };
