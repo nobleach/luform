@@ -14,11 +14,11 @@ module.exports = function(sequelize, Sequelize) {
         },
         firstName: {
             type: Sequelize.STRING,
-            field: 'first_name'
+            field: 'firstname'
         },
         lastName: {
             type: Sequelize.STRING,
-            field: 'last_name'
+            field: 'lastname'
         },
         email: {
             type: Sequelize.STRING,
@@ -34,8 +34,8 @@ module.exports = function(sequelize, Sequelize) {
         },
         role: {
             type:   Sequelize.ENUM,
-            values: ['Member', 'Client', 'Owner', 'Admin'],
-            defaultValue: 'Member'
+            values: ['pilgrim', 'sponsor', 'pastor', 'registar'],
+            defaultValue: 'pilgrim'
         }
     }, {
         freezeTableName: true, // Model tableName will be the same as the model name

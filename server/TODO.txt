@@ -1,0 +1,6 @@
+Update ENUM for pilgrims/sponsor/pastor/registar
+Create models for all DB tables
+link form fields
+figure out multiple select for allgies etc
+disable form elements upon login of higher authority
+
