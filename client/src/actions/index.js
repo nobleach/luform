@@ -12,8 +12,6 @@ import { AUTH_USER,
     const CLIENT_ROOT_URL = 'http://localhost:8080';
 
     export function errorHandler(dispatch, error, type) {
-        console.log('called errorHandler');
-        console.log(error);
         let errorMessage = '';
 
         if(error && error.data.error) {
@@ -25,7 +23,6 @@ import { AUTH_USER,
         }
 
         if(error.status === 401) {
-            console.log('dispatching 401 stuff', type);
             dispatch({
                 type: type,
                 payload: 'You are not authorized to do this. Please login and try again.'

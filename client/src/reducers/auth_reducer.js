@@ -14,7 +14,6 @@ export default function (state = INITIAL_STATE, action) {
         case UNAUTH_USER:
             return { ...state, authenticated: false };
         case AUTH_ERROR:
-            console.log(state);
             return { ...state, error: action.payload, authenticated: false};
         case PROTECTED_TEST:
             return { ...state, content: action.payload };
