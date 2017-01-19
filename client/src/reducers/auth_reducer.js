@@ -1,7 +1,8 @@
 import { AUTH_USER,
     UNAUTH_USER,
     AUTH_ERROR,
-    PROTECTED_TEST
+    PROTECTED_TEST,
+    DASHBOARD_LOAD
 } from '../actions/types';
 
 const INITIAL_STATE = { error: '', message: '', content: '', authenticated: false}
@@ -13,8 +14,11 @@ export default function (state = INITIAL_STATE, action) {
         case UNAUTH_USER:
             return { ...state, authenticated: false };
         case AUTH_ERROR:
-            return { ...state, error: action.payload };
+            console.log(state);
+            return { ...state, error: action.payload, authenticated: false};
         case PROTECTED_TEST:
+            return { ...state, content: action.payload };
+        case DASHBOARD_LOAD:
             return { ...state, content: action.payload };
     }
 

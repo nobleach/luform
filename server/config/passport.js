@@ -10,7 +10,6 @@ const localOptions = { usernameField: 'email' };
 // Setting up local login strategy
 const localLogin = new LocalStrategy(localOptions, function(email, password, done) {
     User.findOne({where: {email: email}}).then(function(user) {
-        // console.log(user.dataValues);
         if(!user.dataValues) {
             return done(null, false, { error: 'Your login details could not be verified. Please try again.' });
         }

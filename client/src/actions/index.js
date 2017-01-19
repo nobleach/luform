@@ -4,24 +4,28 @@ import cookie from 'react-cookie';
 import { AUTH_USER,
     AUTH_ERROR,
     UNAUTH_USER,
-    PROTECTED_TEST
+    PROTECTED_TEST,
+    DASHBOARD_LOAD
 } from './types';
 
     const API_URL = 'http://localhost:4000/api';
     const CLIENT_ROOT_URL = 'http://localhost:8080';
 
     export function errorHandler(dispatch, error, type) {
+        console.log('called errorHandler');
+        console.log(error);
         let errorMessage = '';
 
-        if(error.data.error) {
+        if(error && error.data.error) {
             errorMessage = error.data.error;
-        } else if(error.data) {
+        } else if(error && error.data) {
             errorMessage = error.data;
         } else {
             errorMessage = error;
         }
 
         if(error.status === 401) {
+            console.log('dispatching 401 stuff', type);
             dispatch({
                 type: type,
                 payload: 'You are not authorized to do this. Please login and try again.'
@@ -72,15 +76,15 @@ import { AUTH_USER,
         }
     }
 
-    export function protectedTest() {
+    export function dashboardLoad() {
         return function(dispatch) {
             // so this doesn't exist
-            axios.get(`${API_URL}/protected`, {
+            axios.get(`${API_URL}/dashboard`, {
                 headers: { 'Authorization': cookie.load('token') }
             })
             .then(response => {
                 dispatch({
-                    type: PROTECTED_TEST,
+                    type: DASHBOARD_LOAD,
                     payload: response.data.content
                 });
             })
