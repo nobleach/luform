@@ -41,5 +41,5 @@ module.exports = function(app) {
     });
 
     // Dashboard route
-    apiRoutes.get('/dashboard', requireAuth, DashboardController.show);
+    apiRoutes.get('/dashboard/:userId', requireAuth, DashboardController.show);
 };

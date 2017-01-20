@@ -7,8 +7,8 @@ class Dashboard extends Component {
     constructor(props) {
         super(props);
 
-        console.log(props);
-        this.props.dashboardLoad();
+        let userId = props.params.userId;
+        this.props.dashboardLoad(userId);
     }
 
     renderContent() {

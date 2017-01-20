@@ -4,7 +4,6 @@ import cookie from 'react-cookie';
 import { AUTH_USER,
     AUTH_ERROR,
     UNAUTH_USER,
-    PROTECTED_TEST,
     DASHBOARD_LOAD
 } from './types';
 
@@ -40,9 +39,10 @@ import { AUTH_USER,
         return function(dispatch) {
             axios.post(`${API_URL}/auth/login`, { email, password })
                 .then(response => {
+                    let userId = response.data.user.id;
                     cookie.save('token', response.data.token, { path: '/' });
                     dispatch({ type: AUTH_USER });
-                    window.location.href = CLIENT_ROOT_URL + '/dashboard';
+                    window.location.href = CLIENT_ROOT_URL + `/dashboard/${userId}`;
                 })
                 .catch((error) => {
                     errorHandler(dispatch, error.response, AUTH_ERROR)
@@ -73,10 +73,9 @@ import { AUTH_USER,
         }
     }
 
-    export function dashboardLoad() {
+    export function dashboardLoad(userId) {
         return function(dispatch) {
-            // so this doesn't exist
-            axios.get(`${API_URL}/dashboard`, {
+            axios.get(`${API_URL}/dashboard/${userId}`, {
                 headers: { 'Authorization': cookie.load('token') }
             })
             .then(response => {

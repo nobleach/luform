@@ -15,7 +15,7 @@ export default (
         <IndexRoute component={HomePage} />
         <Route path="register" component={Register} />
         <Route path="login" component={Login} />
-        <Route path="dashboard" component={RequireAuth(Dashboard)} />
+        <Route path="dashboard/:userId" component={RequireAuth(Dashboard)} />
 
         <Route path="*" component={NotFoundPage} />
     </Route>
