@@ -12,6 +12,8 @@ fs
     })
     .forEach(function(file) {
         var model = sequelize.import(path.join(__dirname, file));
+        // To create these tables:
+        // model.sync();
         db[model.name] = model;
     });
 

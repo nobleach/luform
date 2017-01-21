@@ -59,8 +59,9 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         maritalstatus: {
-            type: DataTypes.TEXT,
-            allowNull: true
+            type:   DataTypes.ENUM,
+            values: ['single', 'married', 'separated', 'divorced', 'widowed'],
+            defaultValue: 'married'
         },
         marriagepartner: {
             type: DataTypes.TEXT,
