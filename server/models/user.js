@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/sequelize');
 const bcrypt = require('bcrypt-nodejs');
-const uuid = require('node-uuid');
+const uuid = require('uuid/v4');
 
 //================================
 // User Schema
