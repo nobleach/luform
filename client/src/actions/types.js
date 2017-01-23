@@ -5,3 +5,4 @@ export const FORGOT_PASSWORD_REQUEST = 'forgot_password_request';
 export const RESET_PASSWORD_REQUEST = 'reset_password_request';
 export const PROTECTED_TEST = 'protected_test';
 export const DASHBOARD_LOAD = 'dashboard_load';
+export const REGISTRATION_SUBMIT = 'registration_submit';
