@@ -70,6 +70,9 @@ class Login extends Component {
                         type="submit"
                     />
                 </form>
+                <div className="register-link">
+                    <Link to="register">Or register</Link>
+                </div>
             </Paper>
         );
     }

@@ -56,7 +56,13 @@ import { AUTH_USER,
                 .then(response => {
                     cookie.save('token', response.data.token, { path: '/' });
                     dispatch({ type: AUTH_USER });
-                    window.location.href = CLIENT_ROOT_URL + '/dashboard';
+                    console.log(response.data.user);
+                    const userId = response.data.user.id;
+                    if (response.data.user !== 'pilgrim') {
+                        window.location.href = `${CLIENT_ROOT_URL}/dashboard/${userId}`;
+                    } else {
+                        window.location.href = `${CLIENT_ROOT_URL}/pilgrim/${userId}`;
+                    }
                 })
                 .catch((error) => {
                     errorHandler(dispatch, error.response, AUTH_ERROR)
