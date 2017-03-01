@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 
 const PilgrimForm = () => {
     console.log('im working');
@@ -13,7 +13,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="focusedInput" placeholder="Enter first name" name="firstname" value="{this.props.firstname}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="focusedInput" placeholder="Enter first name" name="firstname" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -21,7 +21,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="lastname" placeholder="Enter last name" name="lastname" value="{this.props.lastname}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="lastname" placeholder="Enter last name" name="lastname" value="" required=""/>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter address" name="address" value="{this.props.address}" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter address" name="address" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -40,7 +40,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="aptnum" placeholder="Apt/SP #" name="aptsuite" value="{this.props.aptsuite}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="aptnum" placeholder="Apt/SP #" name="aptsuite" value="" required=""/>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter city" name="city" value="{this.props.city}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter city" name="city" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -58,7 +58,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <select data-placeholder="Choose state" className="input-sm state form-control alert-danger" id="state" name="state" value="{this.props.state}" required="">
+                                <select data-placeholder="Choose state" className="input-sm state form-control alert-danger" id="state" name="state" value="" required="">
                                     <option value="">--Choose State--</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
@@ -120,7 +120,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="zipcode" placeholder="Enter zipcode" name="zip" value="{this.props.zip}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="zipcode" placeholder="Enter zipcode" name="zip" value="" required=""/>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-phone"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="phonenumber" placeholder="Enter phone number" name="phone" value="{this.props.phone}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="phonenumber" placeholder="Enter phone number" name="phone" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -138,7 +138,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-phone"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="timecall" placeholder="Enter best time to call" name="bestcalltime" value="{this.props.bestcalltime}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="timecall" placeholder="Enter best time to call" name="bestcalltime" value="" required=""/>
 
                             </div>
                         </div>
@@ -150,7 +150,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="email" placeholder="Enter email" name="email" value="{this.props.email}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="email" placeholder="Enter email" name="email" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -158,7 +158,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="18" placeholder="Over 18 years old?" name="over18" value="{this.props.over18}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="18" placeholder="Over 18 years old?" name="over18" value="" required=""/>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-tasks"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="occupation" placeholder="Occupation" name="occupation" value="{this.props.occupation}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="occupation" placeholder="Occupation" name="occupation" value="" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -177,7 +177,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-users"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="nickname" placeholder="Name or Nickname for Weekend Name Tag:" name="tagname" value="{this.props.tagname}" required="" />
+                                <input type="text" className="input-sm form-control alert-danger" id="nickname" placeholder="Name or Nickname for Weekend Name Tag:" name="tagname" value="" required=""/>
                             </div>
                         </div>
                     </div>
@@ -191,163 +191,166 @@ const PilgrimForm = () => {
                                 <label>&nbsp;Marital Status:&nbsp;</label>
 
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Single" />
+                                    <input type="radio" name="maritalstatus" value="Single"/>
+                                    Single
                                 </label>
-                                    <label className="radio-inline">
-                                        <input type="radio" name="maritalstatus" value="Married" />
-                                        </label>
-                                        <label className="radio-inline">
-                                            <input type="radio" name="maritalstatus" value="Separated" />
-                                            </label>
-                                            <label className="radio-inline">
-                                                <input type="radio" name="maritalstatus" value="Divorced" />
-                                                </label>
-                                                <label className="radio-inline">
-                                                    <input type="radio" name="maritalstatus" value="Widowed" />
-                                                    </label>
+                                <label className="radio-inline">
+                                    <input type="radio" name="maritalstatus" value="Married"/>
+                                    Married
+                                </label>
+                                <label className="radio-inline">
+                                    <input type="radio" name="maritalstatus" value="Separated"/>
+                                    Separated
+                                </label>
+                                <label className="radio-inline">
+                                    <input type="radio" name="maritalstatus" value="Divorced"/>
+                                    Divorced
+                                </label>
+                                <label className="radio-inline">
+                                    <input type="radio" name="maritalstatus" value="Widowed"/>
+                                    Widowed
+                                </label>
 
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-5">
-                                                <div className="input-group">
-                                                    <div className="input-group-addon">
-                                                        <i className="fa fa-home"></i>
-                                                    </div>
-                                                    <input type="text" className="input-sm form-control alert-danger" id="marriagepartner" placeholder="To Whom?" name="tagname" value="{this.props.marriagepartner}" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <div className="col-sm-6">
-                                                <div className="input-group">
-                                                    <div className="input-group-addon">
-                                                        <i className="fa fa-home"></i>
-                                                    </div>
-                                                    <input type="text" className="input-sm form-control alert-danger" id="homechurch" placeholder="Enter home church" name="homechurch" value="{this.props.homechurch}" required="" />
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-6">
-                                                <div className="input-group">
-                                                    <div className="input-group-addon">
-                                                        <i className="fa fa-home"></i>
-                                                    </div>
-                                                    <input type="text" className="input-sm form-control alert-danger" id="homechurchcity" placeholder="Enter home church city" name="homechurchcity" value="{this.props.homechurchcity}" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <div className="col-md-8">
-                                                <div className="input-group">
-                                                    <div className="input-group-addon">
-                                                        <i className="fa fa-user"></i>
-                                                    </div>
-                                                    <input type="text" className="input-sm form-control alert-danger" id="pastor" placeholder="Enter pastor name" name="homechurchpastor" value="{this.props.homechurchpastor}" required="" />
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="input-group">
-                                                    <div className="input-group-addon">
-                                                        <i className="fa fa-user"></i>
-                                                    </div>
-                                                    <input type="text" className="input-sm form-control alert-danger" id="howoften" placeholder="How often do you attend church?" name="homechurchattendance" value="{this.props.homechurchattendance}" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <div className="col-lg-12">
-
-                                                <span>SPECIAL NEEDS?</span> If you require a special diet and/or any physical/mobility accommodations, please check the applicable box below and give a
-                                                detailed explanation. This is very important information so that we can make sure you can fully experience all the events/activities throughout
-                                                the weekend.
-        </div>
-    </div>
-
-
-    <div className="form-group">
-        <div className="col-md-8">
-            <div className="input-group">
-                <div className="input-group-addon">
-                    <i className="fa fa-user"></i>
-                </div>
-                <label className="checkbox-inline">
-                    <input type="checkbox" name="specialneeds" value="Allergies to Food (i.e. dairy, nuts, shellfish)" />
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div className="form-group">
-            <div className="col-md-8">
-                <div className="input-group">
-                    <div className="input-group-addon">
-                        <i className="fa fa-user"></i>
-                    </div>
-                    <label className="checkbox-inline">
-                        <input type="checkbox" name="specialneeds" value="Medical necessary Diets (i.e. vegetarian, no salt, diabetic, gluten free, etc...)" />
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div className="form-group">
-                <div className="col-md-8">
-                    <div className="input-group">
-                        <div className="input-group-addon">
-                            <i className="fa fa-user"></i>
-                        </div>
-                        <label className="checkbox-inline">
-                            <input type="checkbox" name="specialneeds" value="Medical / Physical Requirements (ie: cpap machine &amp; plug, language or hearing assistance, medications at a specific time, mobility issues,
-                                wheelchair assistance, recent surgeries, hygiene assistance)
-                                " />
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="form-group">
-                    <div className="col-lg-12">
-                        <div className="input-group">
-                            <div className="input-group-addon">
-                                <i className="fa fa-user"></i>
                             </div>
-                            <textarea className="form-control alert-danger" rows="5" id="comment" placeholder="Applicant - Please tell us why you would like to attend Cursillo and list in detail your current involvement within your church:" name="reasontoattend" value="{this.props.reasontoattend}" required=""></textarea>
+                        </div>
+                        <div className="col-sm-5">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-home"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="marriagepartner" placeholder="To Whom?" name="tagname" value="" required=""/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="form-group">
-                    <div className="col-lg-12">
-        <div className="input-group">
-            <div className="input-group-addon">
-                <i className="fa fa-user"></i>
+
+                    <div className="form-group">
+                        <div className="col-sm-6">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-home"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="homechurch" placeholder="Enter home church" name="homechurch" value="" required=""/>
+                            </div>
+                        </div>
+                        <div className="col-sm-6">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-home"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="homechurchcity" placeholder="Enter home church city" name="homechurchcity" value="" required=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-md-8">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="pastor" placeholder="Enter pastor name" name="homechurchpastor" value="" required=""/>
+                            </div>
+                        </div>
+                        <div className="col-sm-4">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="howoften" placeholder="How often do you attend church?" name="homechurchattendance" value="" required=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-lg-12">
+                            <span>SPECIAL NEEDS?</span>
+                            If you require a special diet and/or any physical/mobility accommodations, please check the applicable box below and give a detailed explanation. This is very important information so that we can make sure you can fully experience all the events/activities throughout the weekend.
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-md-8">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <label className="checkbox-inline">
+                                    <input type="checkbox" name="specialneeds" value="" />
+                                        Allergies to Food (i.e. dairy, nuts, shellfish)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <div className="col-md-8">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <label className="checkbox-inline">
+                                    <input type="checkbox" name="specialneeds" value="" />
+                                    Medical necessary Diets (i.e. vegetarian, no salt, diabetic, gluten free, etc...)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-md-8">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <label className="checkbox-inline">
+                                    <input type="checkbox" name="specialneeds" value="" />
+                                    Medical / Physical Requirements (ie: cpap machine &amp; plug, language or hearing assistance, medications at a specific time, mobility issues,
+                                    wheelchair assistance, recent surgeries, hygiene assistance)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-lg-12">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <textarea className="form-control alert-danger" rows="5" id="comment" placeholder="Applicant - Please tell us why you would like to attend Cursillo and list in detail your current involvement within your church:" name="reasontoattend" value="" required=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <div className="col-lg-12">
+                            <div className="input-group">
+                                <div className="input-group-addon">
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                <input type="text" className="input-sm form-control alert-danger" id="signature" placeholder="Applicant Signature:" name="signed" value="" required=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <div className="col-lg-12">
+
+                            <span>PLEASE NOTE:
+                            </span>
+                            Reservations are limited. Once approved for a weekend, if the requirements are met and the applicant is endorsed to attend the weekend, a letter of invitation will be mailed to you and your sponsor will contact you to confirm your attendance. At least two sets of weekends are held each year. Should you decline to attend a weekend, you will need to reapply. The following information is for Cursillo purposes only and is private and confidential.
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6"><input type="submit" value="Submit"/></div>
+                        <div className="col-md-6"><input type="reset" value="Clear"/></div>
+                    </div>
+
+                </form>
             </div>
-            <input type="text" className="input-sm form-control alert-danger" id="signature" placeholder="Applicant Signature:" name="signed" value="{this.props.signed}" required="" />
+
         </div>
-    </div>
-</div>
-
-<div className="form-group">
-    <div className="col-lg-12">
-
-        <span>PLEASE NOTE: </span> Reservations are limited. Once approved for a weekend, if the requirements are met and the applicant is
-        endorsed to attend the weekend, a letter of invitation will be mailed to you and your sponsor will contact you to confirm
-        your attendance. At least two sets of weekends are held each year. Should you decline to attend a weekend, you will need
-        to reapply. The following information is for Cursillo purposes only and is private and confidential.
-        </div>
-    </div>
-    <div className="row">
-        <div className="col-md-6"><input type="submit" value="Submit" /></div>
-        <div className="col-md-6"><input type="reset" value="Clear" /></div>
-    </div>
-
-    </form></div>
-
-</div>
-)
+    )
 };
 
-PilgrimForm.propTypes = {
-};
+PilgrimForm.propTypes = {};
 
 export default PilgrimForm;
