@@ -42,7 +42,7 @@ import { AUTH_USER,
                     let userId = response.data.user.id;
                     cookie.save('token', response.data.token, { path: '/' });
                     dispatch({ type: AUTH_USER });
-                    window.location.href = CLIENT_ROOT_URL + `/dashboard/${userId}`;
+                    window.location.href = `${CLIENT_ROOT_URL}/dashboard/${userId}`;
                 })
                 .catch((error) => {
                     errorHandler(dispatch, error.response, AUTH_ERROR)
