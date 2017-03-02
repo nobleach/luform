@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 
 const PilgrimForm = () => {
-    console.log('im working');
     return (
         <div className="panel panel-default well">
             <div className="panel-body">
@@ -13,7 +12,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="focusedInput" placeholder="Enter first name" name="firstname" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="focusedInput" placeholder="Enter first name" name="firstname" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -21,7 +20,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="lastname" placeholder="Enter last name" name="lastname" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="lastname" placeholder="Enter last name" name="lastname" required=""/>
                             </div>
                         </div>
                     </div>
@@ -32,7 +31,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter address" name="address" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter address" name="address" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -40,7 +39,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="aptnum" placeholder="Apt/SP #" name="aptsuite" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="aptnum" placeholder="Apt/SP #" name="aptsuite" required=""/>
                             </div>
                         </div>
                     </div>
@@ -50,7 +49,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter city" name="city" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="address" placeholder="Enter city" name="city" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -58,8 +57,8 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <select data-placeholder="Choose state" className="input-sm state form-control alert-danger" id="state" name="state" value="" required="">
-                                    <option value="">--Choose State--</option>
+                                <select data-placeholder="Choose state" className="input-sm state form-control alert-danger" id="state" name="state" required="">
+                                    <option>--Choose State--</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -120,7 +119,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="zipcode" placeholder="Enter zipcode" name="zip" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="zipcode" placeholder="Enter zipcode" name="zip" required=""/>
                             </div>
                         </div>
                     </div>
@@ -130,7 +129,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-phone"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="phonenumber" placeholder="Enter phone number" name="phone" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="phonenumber" placeholder="Enter phone number" name="phone" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -138,7 +137,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-phone"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="timecall" placeholder="Enter best time to call" name="bestcalltime" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="timecall" placeholder="Enter best time to call" name="bestcalltime" required=""/>
 
                             </div>
                         </div>
@@ -150,7 +149,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="email" placeholder="Enter email" name="email" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="email" placeholder="Enter email" name="email" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -158,7 +157,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="18" placeholder="Over 18 years old?" name="over18" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="18" placeholder="Over 18 years old?" name="over18" required=""/>
                             </div>
                         </div>
                     </div>
@@ -169,7 +168,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-tasks"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="occupation" placeholder="Occupation" name="occupation" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="occupation" placeholder="Occupation" name="occupation" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -177,7 +176,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-users"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="nickname" placeholder="Name or Nickname for Weekend Name Tag:" name="tagname" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="nickname" placeholder="Name or Nickname for Weekend Name Tag:" name="tagname" required=""/>
                             </div>
                         </div>
                     </div>
@@ -191,23 +190,23 @@ const PilgrimForm = () => {
                                 <label>&nbsp;Marital Status:&nbsp;</label>
 
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Single"/>
+                                    <input type="radio" name="maritalstatus" />
                                     Single
                                 </label>
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Married"/>
+                                    <input type="radio" name="maritalstatus" />
                                     Married
                                 </label>
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Separated"/>
+                                    <input type="radio" name="maritalstatus" />
                                     Separated
                                 </label>
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Divorced"/>
+                                    <input type="radio" name="maritalstatus" />
                                     Divorced
                                 </label>
                                 <label className="radio-inline">
-                                    <input type="radio" name="maritalstatus" value="Widowed"/>
+                                    <input type="radio" name="maritalstatus" />
                                     Widowed
                                 </label>
 
@@ -218,7 +217,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="marriagepartner" placeholder="To Whom?" name="tagname" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="marriagepartner" placeholder="To Whom?" name="tagname" required=""/>
                             </div>
                         </div>
                     </div>
@@ -229,7 +228,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="homechurch" placeholder="Enter home church" name="homechurch" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="homechurch" placeholder="Enter home church" name="homechurch" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-6">
@@ -237,7 +236,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-home"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="homechurchcity" placeholder="Enter home church city" name="homechurchcity" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="homechurchcity" placeholder="Enter home church city" name="homechurchcity" required=""/>
                             </div>
                         </div>
                     </div>
@@ -248,7 +247,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="pastor" placeholder="Enter pastor name" name="homechurchpastor" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="pastor" placeholder="Enter pastor name" name="homechurchpastor" required=""/>
                             </div>
                         </div>
                         <div className="col-sm-4">
@@ -256,7 +255,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="howoften" placeholder="How often do you attend church?" name="homechurchattendance" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="howoften" placeholder="How often do you attend church?" name="homechurchattendance" required=""/>
                             </div>
                         </div>
                     </div>
@@ -275,7 +274,7 @@ const PilgrimForm = () => {
                                     <i className="fa fa-user"></i>
                                 </div>
                                 <label className="checkbox-inline">
-                                    <input type="checkbox" name="specialneeds" value="" />
+                                    <input type="checkbox" name="specialneeds" />
                                         Allergies to Food (i.e. dairy, nuts, shellfish)
                                 </label>
                             </div>
@@ -288,7 +287,7 @@ const PilgrimForm = () => {
                                     <i className="fa fa-user"></i>
                                 </div>
                                 <label className="checkbox-inline">
-                                    <input type="checkbox" name="specialneeds" value="" />
+                                    <input type="checkbox" name="specialneeds" />
                                     Medical necessary Diets (i.e. vegetarian, no salt, diabetic, gluten free, etc...)
                                 </label>
                             </div>
@@ -302,7 +301,7 @@ const PilgrimForm = () => {
                                     <i className="fa fa-user"></i>
                                 </div>
                                 <label className="checkbox-inline">
-                                    <input type="checkbox" name="specialneeds" value="" />
+                                    <input type="checkbox" name="specialneeds" />
                                     Medical / Physical Requirements (ie: cpap machine &amp; plug, language or hearing assistance, medications at a specific time, mobility issues,
                                     wheelchair assistance, recent surgeries, hygiene assistance)
                                 </label>
@@ -316,7 +315,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <textarea className="form-control alert-danger" rows="5" id="comment" placeholder="Applicant - Please tell us why you would like to attend Cursillo and list in detail your current involvement within your church:" name="reasontoattend" value="" required=""></textarea>
+                                <textarea className="form-control alert-danger" rows="5" id="comment" placeholder="Applicant - Please tell us why you would like to attend Cursillo and list in detail your current involvement within your church:" name="reasontoattend" required=""></textarea>
                             </div>
                         </div>
                     </div>
@@ -326,7 +325,7 @@ const PilgrimForm = () => {
                                 <div className="input-group-addon">
                                     <i className="fa fa-user"></i>
                                 </div>
-                                <input type="text" className="input-sm form-control alert-danger" id="signature" placeholder="Applicant Signature:" name="signed" value="" required=""/>
+                                <input type="text" className="input-sm form-control alert-danger" id="signature" placeholder="Applicant Signature:" name="signed" required=""/>
                             </div>
                         </div>
                     </div>
